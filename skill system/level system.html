@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AETHERION CODEX - Level System</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.9)),
+url("image/background.jpg");
+
+background-size:cover;
+background-attachment:fixed;
+
+padding:40px;
+
+color:white;
+
+}
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+background:rgba(20,20,20,.92);
+
+border:2px solid gold;
+
+border-radius:20px;
+
+padding:35px;
+
+}
+
+.back-btn{
+
+display:inline-block;
+
+padding:12px 25px;
+
+background:#705400;
+
+border:1px solid gold;
+
+border-radius:25px;
+
+text-decoration:none;
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+.back-btn:hover{
+
+background:#e8c46c;
+
+color:black;
+
+}
+
+h1{
+
+text-align:center;
+
+font-size:50px;
+
+color:#e8c46c;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+margin-top:10px;
+
+color:#ccc;
+
+margin-bottom:35px;
+
+}
+
+.section{
+
+background:#111;
+
+border:2px solid #705400;
+
+border-radius:18px;
+
+padding:25px;
+
+margin-bottom:25px;
+
+}
+
+.section h2{
+
+color:#e8c46c;
+
+margin-bottom:15px;
+
+border-bottom:1px solid #705400;
+
+padding-bottom:10px;
+
+}
+
+.section p{
+
+line-height:1.9;
+
+color:#ddd;
+
+text-align:justify;
+
+}
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+th{
+
+background:#705400;
+
+color:white;
+
+padding:15px;
+
+}
+
+td{
+
+padding-right:2px;
+padding-left: 3px;
+
+border:1px solid #444;
+
+}
+
+tr:nth-child(even){
+
+background:#191919;
+
+}
+
+tr:hover{
+
+background:#2a2a2a;
+
+}
+
+.note{
+
+background:#2b2100;
+
+border-left:6px solid gold;
+
+padding:20px;
+
+border-radius:10px;
+
+line-height:1.8;
+
+}
+
+footer{
+
+text-align:center;
+
+margin-top:35px;
+
+color:#777;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="skill system.html" class="back-btn">
+⬅ Back
+</a>
+
+<h1>📈 LEVEL SYSTEM</h1>
+
+<p class="subtitle">
+
+The universal system used to measure the growth and development of all living beings.
+
+</p>
+
+<div class="section">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+Level adalah ukuran perkembangan individu dalam mengendalikan Aether Energy.
+
+Semakin tinggi level seseorang, semakin besar kapasitas energi, kekuatan fisik, pengalaman bertarung, dan penguasaan kemampuan yang dimiliki.
+
+Namun, level bukanlah ukuran mutlak kemenangan.
+
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>⚖ What Does Level Measure?</h2>
+
+<ul style="margin-left:25px; line-height:2;">
+
+<li>⚡ Jumlah Aether Energy.</li>
+
+<li>💪 Kapasitas tubuh.</li>
+
+<li>🎯 Pengendalian energi.</li>
+
+<li> ⚔ Pengalaman bertarung.</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>📊 Level Categories</h2>
+
+<table>
+
+<tr>
+
+<th>Level</th>
+
+<th>Category</th>
+
+<th>Description</th>
+
+<th>Examples</th>
+
+</tr>
+
+<tr>
+
+<td>1 - 10</td>
+
+<td>Ordinary</td>
+
+<td>Makhluk biasa yang baru memulai kehidupannya.</td>
+
+<td>Penduduk, Petualang Baru, Prajurit Pemula</td>
+
+</tr>
+
+<tr>
+
+<td>11 - 30</td>
+
+<td>Beginner</td>
+
+<td>Mulai menguasai dasar pertarungan.</td>
+
+<td>Prajurit Kerajaan, Penyihir Pemula</td>
+
+</tr>
+
+<tr>
+
+<td>31 - 60</td>
+
+<td>Skilled</td>
+
+<td>Sudah memiliki pengalaman bertarung.</td>
+
+<td>Ksatria, Petualang Berpengalaman</td>
+
+</tr>
+
+<tr>
+
+<td>61 - 100</td>
+
+<td>Elite</td>
+
+<td>Melampaui manusia biasa.</td>
+
+<td>Kapten Pasukan, Monster Kuat</td>
+
+</tr>
+
+<tr>
+
+<td>101 - 200</td>
+
+<td>Master</td>
+
+<td>Individu langka yang sangat kuat.</td>
+
+<td>Komandan Kerajaan, Archmage</td>
+
+</tr>
+
+<tr>
+
+<td>201 - 500</td>
+
+<td>Legendary</td>
+
+<td>Makhluk yang tercatat dalam sejarah.</td>
+
+<td>Pahlawan Kuno, Raja Besar, Naga Tua</td>
+
+</tr>
+
+<tr>
+
+<td>501+</td>
+
+<td>Mythical</td>
+
+<td>Eksistensi yang hampir dianggap legenda.</td>
+
+<td>Divine Being, Authority Owner</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>⚔ Combat Principle</h2>
+
+<p>
+
+Memiliki level yang lebih tinggi tidak menjamin kemenangan.
+
+Seseorang dengan level rendah masih dapat mengalahkan lawan yang lebih kuat melalui:
+
+</p>
+
+<br>
+
+<ul style="margin-left:25px; line-height:2;">
+
+<li>🧠 Strategi.</li>
+
+<li>⚔ Pengalaman.</li>
+
+<li>🎯 Kecocokan Skill.</li>
+
+<li>🌍 Kondisi Pertarungan.</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>📌 Important Notes</h2>
+
+<div class="note">
+
+<ul style="margin-left:20px; line-height:2;">
+
+<li>Level mengukur perkembangan, bukan bakat.</li>
+
+<li>Setiap ras memiliki kecepatan perkembangan yang berbeda.</li>
+
+<li>Level tinggi tanpa pengalaman tetap bisa dikalahkan.</li>
+
+<li>Authority tidak dipengaruhi oleh Level.</li>
+
+<li>Level hanyalah salah satu faktor dalam sistem kekuatan Aetherion.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+
+AETHERION © World Bible Project
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

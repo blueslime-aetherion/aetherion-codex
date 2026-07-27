@@ -4,8 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AETHERION CODEX - Race Archive</title>
+<title>AETHERION CODEX - Race System</title>
 
 
 <style>
@@ -21,13 +22,13 @@ font-family:Georgia,serif;
 }
 
 
-
 body{
+
 
 background:
 
-linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.95)),
-url("../image/background.jpg");
+linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.95)),
+url("image/background.jpg");
 
 
 background-size:cover;
@@ -39,81 +40,184 @@ color:white;
 
 padding:40px;
 
+
 }
+
+
 
 
 
 .container{
 
+
 max-width:1200px;
 
 margin:auto;
 
-background:rgba(20,20,20,.92);
 
-padding:35px;
+background:rgba(20,20,20,.93);
+
 
 border:2px solid gold;
 
+
 border-radius:20px;
 
+
+padding:35px;
+
+
 }
+
+
+
 
 
 
 .back-btn{
 
+
 display:inline-block;
+
 
 padding:12px 25px;
 
+
 background:#705400;
 
-color:white;
-
-text-decoration:none;
-
-border-radius:25px;
 
 border:1px solid gold;
 
+
+border-radius:30px;
+
+
+color:white;
+
+
+text-decoration:none;
+
+
 margin-bottom:25px;
 
+
 }
+
 
 
 .back-btn:hover{
 
+
 background:#e8c46c;
+
 
 color:black;
 
+
 }
+
+
+
 
 
 
 
 h1{
 
+
 text-align:center;
+
 
 font-size:50px;
 
+
 color:#e8c46c;
+
 
 }
 
 
 
+
+
 .subtitle{
+
 
 text-align:center;
 
+
 color:#ccc;
+
 
 margin-top:10px;
 
+
 margin-bottom:40px;
+
+
+}
+
+
+
+
+
+
+
+.section{
+
+
+background:#111;
+
+
+border:2px solid #705400;
+
+
+border-radius:18px;
+
+
+padding:25px;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.section h2{
+
+
+color:#e8c46c;
+
+
+border-bottom:1px solid #705400;
+
+
+padding-bottom:10px;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+.section p{
+
+
+color:#ddd;
+
+
+line-height:1.9;
+
+
+text-align:justify;
+
 
 }
 
@@ -124,31 +228,42 @@ margin-bottom:40px;
 
 .race-grid{
 
+
 display:grid;
 
-grid-template-columns:repeat(3,1fr);
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
 
 gap:25px;
+
+
+margin-top:25px;
+
 
 }
 
 
 
 
-.card{
 
 
-background:#111;
+
+
+.race-card{
+
+
+background:#191919;
+
 
 border:2px solid #705400;
 
-border-radius:20px;
 
-overflow:hidden;
+border-radius:18px;
 
-text-decoration:none;
 
-color:white;
+padding:25px;
+
 
 transition:.3s;
 
@@ -157,10 +272,13 @@ transition:.3s;
 
 
 
-.card:hover{
 
 
-transform:translateY(-10px);
+.race-card:hover{
+
+
+transform:translateY(-8px);
+
 
 border-color:#e8c46c;
 
@@ -171,42 +289,16 @@ border-color:#e8c46c;
 
 
 
-.card img{
-
-
-width:100%;
-
-height:300px;
-
-object-fit:cover;
-
-
-}
-
-
-
-
-
-.content{
-
-
-padding:20px;
-
-text-align:center;
-
-
-}
-
-
-
-.content h2{
+.race-card h3{
 
 
 color:#e8c46c;
 
-font-size:28px;
 
-margin-bottom:10px;
+font-size:25px;
+
+
+margin-bottom:15px;
 
 
 }
@@ -214,18 +306,39 @@ margin-bottom:10px;
 
 
 
-.badge{
+
+.tag{
 
 
 display:inline-block;
 
-padding:7px 15px;
 
 background:#333;
 
+
+padding:8px 15px;
+
+
 border-radius:20px;
 
-margin:5px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.list{
+
+
+line-height:2;
+
+
+color:#ddd;
+
+
+margin-left:20px;
 
 
 }
@@ -233,25 +346,52 @@ margin:5px;
 
 
 
-@media(max-width:900px){
 
-.race-grid{
+.balance{
 
-grid-template-columns:repeat(2,1fr);
+
+background:#211800;
+
+
+border-left:6px solid gold;
+
+
+padding:25px;
+
+
+border-radius:10px;
+
+
+line-height:2;
+
+
+text-align:center;
+
+
+font-size:22px;
+
+
+color:#e8c46c;
+
 
 }
 
-}
 
 
 
-@media(max-width:600px){
 
-.race-grid{
 
-grid-template-columns:1fr;
+footer{
 
-}
+
+text-align:center;
+
+
+margin-top:40px;
+
+
+color:#777;
+
 
 }
 
@@ -272,7 +412,9 @@ grid-template-columns:1fr;
 
 
 
-<a href="../world.html" class="back-btn">
+
+
+<a href="/aetherion-codex/index.html" class="back-btn">
 
 ⬅ Back
 
@@ -281,18 +423,71 @@ grid-template-columns:1fr;
 
 
 
+
 <h1>
 
-🌍 Humanoid
+🌍 RACE SYSTEM
 
 </h1>
 
 
+
+
 <p class="subtitle">
 
-Aetherion Species dan Civilization Archive
+Classification of all living beings within the world of Aetherion.
 
 </p>
+
+
+
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+📖 Overview
+</h2>
+
+
+
+<p>
+
+
+Seluruh makhluk hidup di Aetherion diklasifikasikan berdasarkan asal, sifat, kecerdasan, dan hubungan mereka dengan energi dunia.
+
+
+Klasifikasi utama dibagi menjadi enam Kingdom.
+
+
+Setiap Kingdom memiliki peran berbeda dalam menjaga keseimbangan dunia.
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+
+🌎 Six Kingdom Classification
+
+</h2>
 
 
 
@@ -304,114 +499,472 @@ Aetherion Species dan Civilization Archive
 
 
 
-<!-- HUMAN -->
-
-<a href="human.html" class="card">
 
 
-<img src="foto race/human.png">
+<div class="race-card">
 
 
-<div class="content">
+<span class="tag">
+
+Kingdom 01
+
+</span>
+
+
+<h3>
+
+🧑 Humanoid
+
+</h3>
+
+
+<p>
+
+
+Makhluk berakal yang memiliki kemampuan membangun peradaban.
+
+
+</p>
+
+
+<br>
+
+
+<b>Contoh:</b>
+
+
+<ul class="list">
+
+<li>Human</li>
+
+<li>Elf</li>
+
+<li>Dwarf</li>
+
+<li>Beastkin</li>
+
+<li>Goblin</li>
+
+<li>Orc</li>
+
+<li>Seraphim</li>
+
+<li>Daemori</li>
+
+<li>Giant</li>
+
+<li>Dragonborn</li>
+
+</ul>
+
+
+<br>
+
+
+<b>Memiliki:</b>
+
+<ul class="list">
+
+<li>Budaya</li>
+
+<li>Bahasa</li>
+
+<li>Kerajaan</li>
+
+<li>Politik</li>
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="race-card">
+
+
+<span class="tag">
+
+Kingdom 02
+
+</span>
+
+
+
+<h3>
+
+🐺 Wild Beast
+
+</h3>
+
+
+<p>
+
+
+Makhluk alami yang berkembang biak secara normal dan menjadi bagian dari ekosistem.
+
+
+</p>
+
+
+
+<br>
+
+
+<b>Contoh:</b>
+
+
+<ul class="list">
+
+<li>Serigala</li>
+
+<li>Beruang</li>
+
+<li>Rusa</li>
+
+</ul>
+
+
+<br>
+
+
+<b>Status:</b>
+
+
+<ul class="list">
+
+<li>Dapat berkembang biak</li>
+
+<li>Dapat punah</li>
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="race-card">
+
+
+<span class="tag">
+
+Kingdom 03
+
+</span>
+
+
+
+<h3>
+
+✨ Magic Beast
+
+</h3>
+
+
+
+<p>
+
+
+Makhluk yang mengalami evolusi akibat menyerap Mana dalam jumlah besar.
+
+
+</p>
+
+
+
+<br>
+
+
+<b>Contoh:</b>
+
+
+<ul class="list">
+
+<li>Fire Wolf</li>
+
+<li>Thunder Lion</li>
+
+<li>Crystal Turtle</li>
+
+</ul>
+
+
+<br>
+
+
+<b>Asal:</b>
+
+<ul class="list">
+
+<li>Wild Beast + Mana</li>
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="race-card">
+
+
+<span class="tag">
+
+Kingdom 04
+
+</span>
+
+
+<h3>
+
+☠ Corrupted Monster
+
+</h3>
+
+
+
+<p>
+
+
+Makhluk yang tercipta akibat energi Mana yang mengalami kerusakan.
+
+
+</p>
+
+
+
+<br>
+
+
+<b>Ciri:</b>
+
+
+<ul class="list">
+
+<li>Tidak berkembang biak.</li>
+
+<li>Muncul selama sumber korupsi ada.</li>
+
+<li>Berbahaya bagi lingkungan.</li>
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="race-card">
+
+
+<span class="tag">
+
+Kingdom 05
+
+</span>
+
+
+
+<h3>
+
+🌑 Abyssal Creature
+
+</h3>
+
+
+
+<p>
+
+
+Makhluk yang berasal dari Abyss Realm.
+
+
+</p>
+
+
+
+<br>
+
+
+<b>Muncul melalui:</b>
+
+
+<ul class="list">
+
+<li>Realm Barrier Retak.</li>
+
+<li>Pemanggilan tertentu.</li>
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="race-card">
+
+
+<span class="tag">
+
+Kingdom 06
+
+</span>
+
+
+
+<h3>
+
+☀ Divine Creature
+
+</h3>
+
+
+
+<p>
+
+
+Makhluk langka yang memiliki hubungan dengan energi suci.
+
+
+</p>
+
+
+
+<br>
+
+
+<b>Contoh:</b>
+
+
+<ul class="list">
+
+<li>Phoenix</li>
+
+<li>Kirin</li>
+
+<li>Sacred Dragon</li>
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="section">
 
 
 <h2>
-Human
+
+⚖ Law of Natural Balance
+
 </h2>
 
 
-<span class="badge">
-Humanoid
-</span>
+
+<div class="balance">
 
 
-<span class="badge">
-Common
-</span>
+" Tidak ada spesies yang boleh mendominasi dunia sepenuhnya. "
 
 
 </div>
 
 
-</a>
+
+<br>
+
+
+<p>
+
+
+Aetherion memiliki hukum keseimbangan alami.
+
+
+Jika satu kekuatan berkembang terlalu besar, dunia akan mengalami reaksi:
+
+
+</p>
+
+
+<br>
 
 
 
+<ul class="list">
 
 
+<li>Mana menjadi rusak.</li>
 
 
+<li>Corrupted Monster muncul.</li>
 
 
-<!-- ELF -->
-
-<a href="elf.html" class="card">
+<li>Alam mengalami kehancuran.</li>
 
 
-<img src="foto race/elf.png">
-
-
-<div class="content">
-
-
-<h2>
-Elf
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Ancient Race
-</span>
-
-
-</div>
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- DWARF -->
-
-<a href="dwarf.html" class="card">
-
-
-<img src="foto race/dwarf.png">
-
-
-<div class="content">
-
-
-<h2>
-Dwarf
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Craft Race
-</span>
+</ul>
 
 
 </div>
 
 
-</a>
 
 
 
@@ -419,288 +972,15 @@ Craft Race
 
 
 
+<footer>
 
+AETHERION CODEX © World Bible Project
 
-<!-- BEASTKIN -->
-
-
-<a href="beastkin.html" class="card">
-
-
-<img src="foto race/beastkin.png">
-
-
-<div class="content">
-
-
-<h2>
-Beastkin
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Hybrid
-</span>
-
-
-</div>
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- GOBLIN -->
-
-
-<a href="goblin.html" class="card">
-
-
-<img src="foto race/goblin.png">
-
-
-<div class="content">
-
-
-<h2>
-Goblin
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Small Race
-</span>
-
-
-</div>
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- ORC -->
-
-
-<a href="orc.html" class="card">
-
-
-<img src="foto race/orc.png">
-
-
-<div class="content">
-
-
-<h2>
-Orc
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Warrior Race
-</span>
-
-
-</div>
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- SERAPHIM -->
-
-
-<a href="seraphim.html" class="card">
-
-
-<img src="foto race/Seraphim.png">
-
-
-<div class="content">
-
-
-<h2>
-Seraphim
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Divine Race
-</span>
-
-
-</div>
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- DAEMORI -->
-
-
-<a href="daemori.html" class="card">
-
-
-<img src="foto race/DAEMORI.png">
-
-
-<div class="content">
-
-
-<h2>
-Daemori
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Dark Race
-</span>
-
-
-</div>
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- GIANT -->
-
-
-<a href="giant.html" class="card">
-
-
-<img src="foto race/giant.png">
-
-
-<div class="content">
-
-
-<h2>
-Giant
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Ancient Race
-</span>
-
-
-</div>
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- DRAGONBORN -->
-
-
-<a href="dragonborn.html" class="card">
-
-
-<img src="foto race/dragonborn.png">
-
-
-<div class="content">
-
-
-<h2>
-Dragonborn
-</h2>
-
-
-<span class="badge">
-Humanoid
-</span>
-
-
-<span class="badge">
-Dragon Blood
-</span>
-
-
-</div>
-
-
-</a>
-
+</footer>
 
 
 
 </div>
-
-
-</div>
-
 
 
 </body>

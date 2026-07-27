@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AETHERION CODEX - Rank System</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.9)),
+url("image/background.jpg");
+
+background-size:cover;
+background-attachment:fixed;
+
+padding:40px;
+color:white;
+
+}
+
+.container{
+
+max-width:1200px;
+margin:auto;
+
+background:rgba(20,20,20,.92);
+
+border:2px solid gold;
+
+border-radius:20px;
+
+padding:35px;
+
+}
+
+.back-btn{
+
+display:inline-block;
+
+padding:12px 25px;
+
+background:#705400;
+
+border:1px solid gold;
+
+border-radius:30px;
+
+text-decoration:none;
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+.back-btn:hover{
+
+background:#e8c46c;
+
+color:black;
+
+}
+
+h1{
+
+text-align:center;
+
+font-size:50px;
+
+color:#e8c46c;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#ccc;
+
+margin-top:10px;
+
+margin-bottom:35px;
+
+}
+
+.section{
+
+background:#111;
+
+border:2px solid #705400;
+
+border-radius:18px;
+
+padding:25px;
+
+margin-bottom:25px;
+
+}
+
+.section h2{
+
+color:#e8c46c;
+
+margin-bottom:15px;
+
+border-bottom:1px solid #705400;
+
+padding-bottom:10px;
+
+}
+
+.section p{
+
+line-height:1.9;
+
+color:#ddd;
+
+text-align:justify;
+
+}
+
+.rank-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+margin-top:20px;
+
+}
+
+.rank{
+
+background:#1b1b1b;
+
+border:2px solid #333;
+
+border-radius:15px;
+
+padding:20px;
+
+transition:.3s;
+
+}
+
+.rank:hover{
+
+transform:translateY(-5px);
+
+border-color:gold;
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:8px 16px;
+
+border-radius:20px;
+
+font-weight:bold;
+
+margin-bottom:15px;
+
+}
+
+.f{background:#777;}
+.e{background:#4CAF50;}
+.d{background:#2196F3;}
+.c{background:#9C27B0;}
+.b{background:#FF9800;}
+.a{background:#F44336;}
+.s{background:#FFD700;color:black;}
+.ss{background:#00E5FF;color:black;}
+.ex{
+background:linear-gradient(45deg,#ff0000,#ffd700,#00ffff,#ff00ff);
+color:black;
+font-weight:bold;
+}
+
+.rank h3{
+
+margin-bottom:10px;
+
+color:#e8c46c;
+
+}
+
+.rank p{
+
+line-height:1.7;
+
+color:#ddd;
+
+}
+
+.note{
+
+background:#2b2100;
+
+border-left:6px solid gold;
+
+padding:20px;
+
+border-radius:10px;
+
+line-height:1.8;
+
+}
+
+footer{
+
+text-align:center;
+
+margin-top:40px;
+
+color:#777;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="skill system.html" class="back-btn">⬅ Back</a>
+
+<h1>⭐ RANK SYSTEM</h1>
+
+<p class="subtitle">
+
+A public evaluation system used throughout Aetherion to classify an individual's strength and threat level.
+
+</p>
+
+<div class="section">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+Rank adalah sistem klasifikasi yang digunakan masyarakat Aetherion untuk menilai tingkat kemampuan seseorang atau tingkat ancaman suatu makhluk.
+
+Berbeda dengan Level yang mengukur perkembangan individu, Rank adalah penilaian yang diberikan berdasarkan kekuatan nyata, reputasi, pencapaian, dan kemampuan bertarung.
+
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>🏅 Rank Classification</h2>
+
+<div class="rank-grid">
+
+<div class="rank">
+
+<span class="badge f">F Rank</span>
+
+<h3>Beginner</h3>
+
+<p>
+
+Tingkat terendah.
+
+Biasanya dimiliki warga biasa, petualang baru, dan prajurit pemula.
+
+</p>
+
+</div>
+
+<div class="rank">
+
+<span class="badge e">E Rank</span>
+
+<h3>Apprentice</h3>
+
+<p>
+
+Mulai memahami dasar pertarungan dan penggunaan energi.
+
+</p>
+
+</div>
+
+<div class="rank">
+
+<span class="badge d">D Rank</span>
+
+<h3>Skilled</h3>
+
+<p>
+
+Prajurit profesional dan petualang berpengalaman.
+
+</p>
+
+</div>
+
+<div class="rank">
+
+<span class="badge c">C Rank</span>
+
+<h3>Elite</h3>
+
+<p>
+
+Pejuang yang mampu menghadapi ancaman besar dan memimpin kelompok kecil.
+
+</p>
+
+</div>
+
+<div class="rank">
+
+<span class="badge b">B Rank</span>
+
+<h3>Master</h3>
+
+<p>
+
+Tokoh terkenal seperti Kapten Ksatria, Penyihir Kerajaan, dan Petualang Senior.
+
+</p>
+
+</div>
+
+<div class="rank">
+
+<span class="badge a">A Rank</span>
+
+<h3>Grandmaster</h3>
+
+<p>
+
+Jumlahnya sangat sedikit.
+
+Kekuatan mereka dapat mengubah jalannya peperangan.
+
+</p>
+
+</div>
+
+<div class="rank">
+
+<span class="badge s">S Rank</span>
+
+<h3>Legendary</h3>
+
+<p>
+
+Makhluk yang tercatat dalam sejarah dunia.
+
+</p>
+
+</div>
+
+<div class="rank">
+
+<span class="badge ss">SS Rank</span>
+
+<h3>Mythical</h3>
+
+<p>
+
+Eksistensi yang berada jauh di atas mayoritas makhluk hidup.
+
+</p>
+
+</div>
+
+<div class="rank">
+
+<span class="badge ex">EX Rank</span>
+
+<h3>Beyond System</h3>
+
+<p>
+
+Tidak dapat diukur oleh sistem dunia.
+
+Contoh: Dewa, Eksistensi Luar Realm, dan makhluk yang melampaui hukum dunia.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>⚖ Rank vs Level</h2>
+
+<p>
+
+Level dan Rank bukanlah hal yang sama.
+
+Seseorang dapat memiliki Level tinggi tetapi Rank yang lebih rendah jika belum memiliki pencapaian atau belum diakui masyarakat.
+
+Sebaliknya, seseorang dengan Level lebih rendah bisa memiliki Rank tinggi karena prestasi luar biasa.
+
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>📌 Important Notes</h2>
+
+<div class="note">
+
+<ul style="margin-left:20px;line-height:2;">
+
+<li>Rank merupakan sistem penilaian masyarakat, bukan hukum mutlak.</li>
+
+<li>Rank dapat berubah seiring pencapaian dan reputasi.</li>
+
+<li>Monster juga memiliki Rank ancaman.</li>
+
+<li>Guild Petualang menggunakan Rank sebagai standar misi.</li>
+
+<li>Authority tidak menentukan Rank secara otomatis.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+
+AETHERION © World Bible Project
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
