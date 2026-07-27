@@ -18,7 +18,7 @@ id:"CHR-001",
 
 name:"Velze Voul",
 
-image:"image/velze.png",
+image:"image/VELZE.png",
 
 race:"Human",
 
