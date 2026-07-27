@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetherion Interactive Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            color: #f4e8d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Tombol Back ke Dasbor */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #1a1a1a;
+            border: 1px solid #d4af37;
+            color: #f4e8d1;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .back-btn:hover {
+            background: #d4af37;
+            color: #000;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .modal-content {
+            background: #111;
+            border: 2px solid #d4af37;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .modal-content h2 {
+            color: #d4af37;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .modal-sub {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        /* Area Peta */
+        .map-container {
+            margin: 15px 0;
+            width: 100%;
+            height: 480px;
+            border: 1px solid #444;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        .map-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transform: scale(1.0); /* Zoom 90% lebih besar */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: grab;
+        }
+
+        .map-container img:active {
+            cursor: grabbing;
+        }
+
+        /* Tombol Navigasi Benua */
+        .continent-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .continent-buttons button {
+            background: #1a1a1a;
+            border: 1px solid #d4af37;
+            color: #f4e8d1;
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .continent-buttons button:hover {
+            background: #d4af37;
+            color: #000;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol Back ke Dasbor -->
+    <a href="../dasbor.html" class="back-btn">&#8592; BACK</a>
+
+    <div class="modal-content">
+        <h2>AETHERION - CONTINENTS OF DESTINY</h2>
+        <p class="modal-sub">Pilih wilayah benua di bawah untuk melihat detail peta.</p>
+        
+        <!-- Tampilan Gambar Peta -->
+        <div class="map-container" id="mapBox">
+            <img src="file:///D:/data%20rafi/Novel/fantasi/map/benua.png" alt="Aetherion Map" id="mainMapImage">
+        </div>
+
+        <!-- Tombol Pilihan Benua -->
+        <div class="continent-buttons">
+            <button onclick="showContinent('main')">Peta Utama</button>
+            <button onclick="showContinent('centralis')">Centralis</button>
+            <button onclick="showContinent('eldoria')">Eldoria</button>
+            <button onclick="showContinent('ignaris')">Ignaris</button>
+            <button onclick="showContinent('frostheim')">Frostheim</button>
+            <button onclick="showContinent('sylvara')">Sylvara</button>
+            <button onclick="showContinent('abyssal')">Abyssal Border</button>
+            <button onclick="showContinent('forbidden')">Forbidden Land</button>
+        </div>
+    </div>
+
+    <script>
+        const mapImages = {
+            main: "file:///D:/data%20rafi/Novel/fantasi/map/benua.png",
+            centralis: "file:///D:/data%20rafi/Novel/fantasi/map/Centralis%20Continent.png",
+    eldoria: "file:///D:/data%20rafi/Novel/fantasi/map/Eldoria%20Continent.png",
+    ignaris: "file:///D:/data%20rafi/Novel/fantasi/map/Ignaris%20Continent.png",
+    frostheim: "file:///D:/data%20rafi/Novel/fantasi/map/Frostheim%20Continent.png",
+    sylvara: "file:///D:/data%20rafi/Novel/fantasi/map/Sylvara%20Continent.png",
+    abyssal: "file:///D:/data%20rafi/Novel/fantasi/map/Abyssal%20Border%20Continent.png",
+    forbidden: "file:///D:/data%20rafi/Novel/fantasi/map/The%20Forbidden%20Land.png"
+        };
+
+        const mainMapImage = document.getElementById("mainMapImage");
+
+        function showContinent(continentKey) {
+            if (mapImages[continentKey]) {
+                mainMapImage.style.opacity = 0; 
+                setTimeout(() => {
+                    mainMapImage.src = mapImages[continentKey];
+                    mainMapImage.style.opacity = 1;
+                    mainMapImage.style.transform = "scale(1.0)";
+                }, 150);
+            }
+        }
+    </script>
+
+</body>
+</html>
