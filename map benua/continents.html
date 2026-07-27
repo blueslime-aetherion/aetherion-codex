@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+AETHERION - Fragments of Creation
+</title>
+
+
+<link rel="stylesheet" href="style..css">
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+✦ AETHERION ✦
+</h1>
+
+<p>
+Fragments of Creation | World Map
+</p>
+
+</header>
+
+
+
+<div class="toolbar">
+
+<button onclick="zoomIn()">＋</button>
+
+<button onclick="zoomOut()">－</button>
+
+<button onclick="resetMap()">◈</button>
+
+</div>
+
+
+
+
+<div id="map-container">
+
+
+<svg id="world-map"
+viewBox="0 0 1600 1100">
+
+
+
+<!-- ======================
+ WORLD CORE
+======================= -->
+
+
+<circle
+
+cx="720"
+cy="540"
+
+r="70"
+
+class="world-core"
+
+/>
+
+
+<text
+
+x="650"
+
+y="505"
+
+class="core-label">
+
+WORLD CORE
+
+</text>
+
+
+
+
+
+<!-- ======================
+ OCEAN
+======================= -->
+
+
+<text x="600" y="120"
+class="ocean">
+
+❄ Frozen Ocean
+
+</text>
+
+
+
+<text x="1000" y="520"
+class="ocean">
+
+🌊 Aether Sea
+
+</text>
+
+
+<text x="300" y="650"
+class="ocean">
+
+☠ Abyss Sea
+
+</text>
+
+
+
+<text x="900" y="850"
+class="ocean">
+
+🌫 Silent Sea
+
+</text>
+
+
+
+
+
+
+<!-- ======================
+ FROSTHEIM
+======================= -->
+
+
+<path
+id="frostheim"
+class="continent frostheim"
+
+d="
+M620 80
+L950 60
+L1080 170
+L980 300
+L650 270
+L520 160
+Z"
+
+onclick="showRegion('frostheim')"
+/>
+
+
+<text x="650" y="180">
+
+❄ FROSTHEIM
+
+</text>
+
+
+
+
+
+
+
+<!-- ======================
+ ELDORIA
+======================= -->
+
+
+<path
+
+id="eldoria"
+
+class="continent eldoria"
+
+d="
+
+M150 280
+L430 180
+L560 330
+L430 500
+L160 430
+Z"
+
+onclick="showRegion('eldoria')"
+
+/>
+
+
+<text x="220" y="320">
+
+🌲 ELDORIA
+
+</text>
+
+
+
+
+
+
+<!-- ======================
+ IGNARIS
+======================= -->
+
+
+<path
+
+id="ignaris"
+
+class="continent ignaris"
+
+d="
+
+M1050 260
+L1370 320
+L1400 560
+L1120 620
+L950 430
+Z"
+
+onclick="showRegion('ignaris')"
+
+/>
+
+
+
+<text x="1000" y="390">
+
+🌋 IGNARIS
+
+</text>
+
+
+
+
+
+
+<!-- ======================
+ CENTRALIS
+======================= -->
+
+
+<path
+
+id="centralis"
+
+class="continent centralis"
+
+d="
+
+M520 380
+L900 350
+L1050 520
+L900 720
+L520 680
+L400 520
+Z"
+
+onclick="showRegion('centralis')"
+
+/>
+
+
+<text x="600" y="500">
+
+🏰 CENTRALIS
+
+</text>
+
+
+
+
+
+
+
+
+<!-- ======================
+ ABYSSAL BORDER
+======================= -->
+
+
+<path
+
+id="abyssal"
+
+class="continent abyssal"
+
+d="
+
+M100 650
+L380 520
+L520 760
+L250 900
+L80 780
+Z"
+
+onclick="showRegion('abyssal')"
+
+/>
+
+<text x="170" y="650">
+
+☠ ABYSSAL BORDER
+
+</text>
+
+
+
+
+
+
+<!-- ======================
+ SYLVARA
+======================= -->
+
+
+<path
+
+id="sylvara"
+
+class="continent sylvara"
+
+d="
+
+M550 780
+L900 740
+L1050 920
+L700 1030
+L420 900
+Z"
+
+onclick="showRegion('sylvara')"
+
+/>
+
+
+<text x="550" y="820">
+
+🌿 SYLVARA
+
+</text>
+
+
+
+
+
+
+<!-- ======================
+ SOUTHERN VOID
+======================= -->
+
+
+<path
+
+id="southern"
+
+class="continent southern"
+
+d="
+
+M1100 820
+L1450 850
+L1350 1050
+L1050 1000
+Z"
+
+onclick="showRegion('southern')"
+
+/>
+
+
+
+<text x="1000" y="820">
+
+🌀 SOUTHERN VOID
+
+</text>
+
+
+
+
+
+
+
+<!-- ======================
+ FORBIDDEN LAND
+======================= -->
+
+
+<path
+
+class="forbidden"
+
+d="
+
+M1300 80
+L1530 130
+L1480 260
+L1280 220
+Z"
+
+onclick="showRegion('forbidden')"
+
+/>
+
+<text x="1150" y="150">
+
+☠ FORBIDDEN
+
+</text>
+
+
+
+
+
+
+<!-- ======================
+ CITY MARKER
+======================= -->
+
+
+<g class="marker"
+
+onclick="showCity('elyndor')">
+
+
+<circle cx="720" cy="500" r="15"/>
+
+<text x="720" y="500">
+
+🏰 Elyndor
+
+</text>
+
+</g>
+
+
+
+
+
+<g class="marker"
+
+onclick="showCity('worldtree')">
+
+
+<circle cx="320" cy="330" r="15"/>
+
+<text x="320" y="330">
+
+🌲 World Tree
+
+</text>
+
+</g>
+
+
+
+
+
+
+<g class="marker"
+
+onclick="showCity('dragonfort')">
+
+
+<circle cx="1200" cy="430" r="15"/>
+
+<text x="1070" y="355">
+
+🐉 Dragon Fortress
+
+</text>
+
+</g>
+
+
+
+
+
+
+
+<g class="marker"
+
+onclick="showCity('abyssgate')">
+
+
+<circle cx="250" cy="720" r="15"/>
+
+<text x="250" y="720">
+
+🌀 Abyss Gate
+
+</text>
+
+</g>
+
+
+
+
+
+
+<!-- DUNGEON -->
+
+
+<g class="dungeon">
+
+
+<circle cx="750" cy="600" r="18"/>
+
+
+<text x="780" y="605">
+
+🌀 Ancient Dungeon
+
+</text>
+
+
+</g>
+
+
+
+<!-- ======================
+ EXTRA WORLD MARKERS
+======================= -->
+
+
+<!-- KINGDOM MARKER -->
+
+<g class="world-marker kingdom"
+
+onclick="showLocation('elyndor')">
+
+
+<circle 
+cx="650"
+cy="420"
+r="18"/>
+
+
+<text 
+x="680"
+y="425">
+
+🏰 Elyndor Kingdom
+
+</text>
+
+
+</g>
+
+
+
+
+
+<!-- ELF SACRED AREA -->
+
+<g class="world-marker spirit"
+
+onclick="showLocation('worldtree')">
+
+
+<circle
+
+cx="280"
+
+cy="280"
+
+r="18"/>
+
+
+<text
+
+x="310"
+
+y="285">
+
+🌲 World Tree
+
+</text>
+
+
+</g>
+
+
+
+
+
+
+<!-- DRAGON AREA -->
+
+<g class="world-marker dragon"
+
+onclick="showLocation('dragon')">
+
+
+<circle
+
+cx="1050"
+
+cy="350"
+
+r="18"/>
+
+
+<text
+
+x="1080"
+
+y="355">
+
+🐉 Dragon Fortress
+
+</text>
+
+
+</g>
+
+
+
+
+
+
+
+<!-- DUNGEON -->
+
+<g class="world-marker dungeon"
+
+onclick="showLocation('ancientDungeon')">
+
+
+<circle
+
+cx="760"
+
+cy="600"
+
+r="20"/>
+
+
+<text
+
+x="800"
+
+y="605">
+
+🌀 Ancient Dungeon
+
+</text>
+
+
+</g>
+
+
+
+
+
+
+
+<!-- WAR AREA -->
+
+
+<g class="world-marker war"
+
+onclick="showLocation('battlefield')">
+
+
+<circle
+
+cx="300"
+
+cy="600"
+
+r="18"/>
+
+
+<text
+
+x="330"
+
+y="605">
+
+⚔ Ancient Battlefield
+
+</text>
+
+
+</g>
+
+
+
+</svg>
+
+
+</div>
+
+
+
+
+
+
+<!-- INFORMATION PANEL -->
+
+
+<div id="info-panel">
+
+
+<h2 id="title">
+
+AETHERION
+
+</h2>
+
+
+<p id="description">
+
+Klik wilayah untuk melihat informasi.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<script src="map.js"></script>
+
+</body>
+
+
+</html>

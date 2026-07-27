@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+AETHERION CONTINENTS
+</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="continents.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- BACKGROUND -->
+<!-- ========================= -->
+
+<div class="background">
+
+<div class="overlay"></div>
+
+</div>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header>
+
+<a href="../world.html"
+class="backButton">
+
+⬅ Back
+
+</a>
+
+<h1>
+
+🌍
+AETHERION CONTINENTS
+
+</h1>
+
+<h2>
+
+Geography &
+Political Encyclopedia
+
+</h2>
+
+<p>
+
+Volume I
+Chapter III
+
+</p>
+
+</header>
+
+<!-- ========================= -->
+<!-- INFO BAR -->
+<!-- ========================= -->
+
+<section class="worldInfo">
+
+<div>
+
+⭐
+7 Great Gods
+
+</div>
+
+<div>
+
+🌌
+7 World Core Veins
+
+</div>
+
+<div>
+
+🏛
+7 Ancient Regions
+
+</div>
+
+<div>
+
+⚔
+52.000 Years History
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CARD GRID -->
+<!-- ========================= -->
+
+<section class="grid">
+
+<!-- CENTRALIS -->
+
+<div class="card centralis"
+onclick="openContinent('centralis')">
+
+<div class="image">
+
+<img
+src="image/centralis.png">
+
+</div>
+
+<div class="content">
+
+<h2>
+
+Centralis
+
+</h2>
+
+<p>
+
+Heart of Civilization
+
+</p>
+
+<div class="stats">
+
+<div>
+
+👑
+Elarion Empire
+
+</div>
+
+<div>
+
+👥
+Human • Elf
+
+</div>
+
+<div>
+
+⚔
+Low Threat
+
+</div>
+
+</div>
+
+<button>
+
+View Details
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ELDORIA -->
+
+<div class="card eldoria"
+onclick="openContinent('eldoria')">
+
+<div class="image">
+
+<img
+src="image/eldoria.png">
+
+</div>
+
+<div class="content">
+
+<h2>
+
+Eldoria
+
+</h2>
+
+<p>
+
+Ancient Forest
+
+</p>
+
+<div class="stats">
+
+<div>
+
+🌳
+Sylvan Covenant
+
+</div>
+
+<div>
+
+🧝
+Elf • Spirit Folk
+
+</div>
+
+<div>
+
+🌿
+Nature Mana
+
+</div>
+
+</div>
+
+<button>
+
+View Details
+
+</button>
+
+</div>
+
+</div>
+
+<!-- IGNARIS -->
+
+<div class="card ignaris"
+onclick="openContinent('ignaris')">
+
+<div class="image">
+
+<img
+src="image/ignaris.png">
+
+</div>
+
+<div class="content">
+
+<h2>
+
+Ignaris
+
+</h2>
+
+<p>
+
+Land of Fire
+
+</p>
+
+<div class="stats">
+
+<div>
+
+⚒
+Ironforge
+
+</div>
+
+<div>
+
+🐉
+Dragonborn
+
+</div>
+
+<div>
+
+🔥
+Volcano
+
+</div>
+
+</div>
+
+<button>
+
+View Details
+
+</button>
+
+</div>
+
+</div>
+
+<!-- FROSTHEIM -->
+
+<div class="card frostheim"
+onclick="openContinent('frostheim')">
+
+<div class="image">
+
+<img
+src="image/frostheim.png">
+
+</div>
+
+<div class="content">
+
+<h2>
+
+Frostheim
+
+</h2>
+
+<p>
+
+Frozen North
+
+</p>
+
+<div class="stats">
+
+<div>
+
+❄
+Northern Clans
+
+</div>
+
+<div>
+
+🐺
+Beastkin
+
+</div>
+
+<div>
+
+🧊
+Extreme Cold
+
+</div>
+
+</div>
+
+<button>
+
+View Details
+
+</button>
+
+</div>
+
+</div>
+
+<!-- SYLVARA -->
+
+<div class="card sylvara"
+onclick="openContinent('sylvara')">
+
+<div class="image">
+
+<img
+src="image/sylvara.png">
+
+</div>
+
+<div class="content">
+
+<h2>
+
+Sylvara
+
+</h2>
+
+<p>
+
+Land of Life
+
+</p>
+
+<div class="stats">
+
+<div>
+
+🌿
+Verdant Kingdom
+
+</div>
+
+<div>
+
+🧚
+Dryad
+
+</div>
+
+<div>
+
+💚
+High Mana
+
+</div>
+
+</div>
+
+<button>
+
+View Details
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ABYSSAL -->
+
+<div class="card abyssal"
+onclick="openContinent('abyssal')">
+
+<div class="image">
+
+<img
+src="image/abyssal.png">
+
+</div>
+
+<div class="content">
+
+<h2>
+
+Abyssal Border
+
+</h2>
+
+<p>
+
+Border of Abyss
+
+</p>
+
+<div class="stats">
+
+<div>
+
+😈
+Daemori
+
+</div>
+
+<div>
+
+⚔
+War Zone
+
+</div>
+
+<div>
+
+☠
+Extreme
+
+</div>
+
+</div>
+
+<button>
+
+View Details
+
+</button>
+
+</div>
+
+</div>
+
+<!-- VOID -->
+
+<div class="card void"
+onclick="openContinent('void')">
+
+<div class="image">
+
+<img
+src="image/forbiddenland.png">
+
+</div>
+
+<div class="content">
+
+<h2>
+
+Southern Void
+
+</h2>
+
+<p>
+
+Forbidden Land
+
+</p>
+
+<div class="stats">
+
+<div>
+
+🌌
+World Core
+
+</div>
+
+<div>
+
+☠
+Forbidden
+
+</div>
+
+<div>
+
+❌
+No Entry
+
+</div>
+
+</div>
+
+<button>
+
+View Details
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- POPUP -->
+
+<div id="popup">
+
+<div id="popupContent">
+
+<span id="close">
+
+✖
+
+</span>
+
+<div id="popupBody">
+
+</div>
+
+</div>
+
+</div>
+
+<script src="continents.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+AETHERION DUNGEON CODEX
+</title>
+
+
+<link rel="stylesheet" href="dungeon.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<header>
+
+
+<a href="../world.html" class="back">
+
+⬅ Back
+
+</a>
+
+
+
+<h1>
+🕳 AETHERION DUNGEON CODEX
+</h1>
+
+
+<h2>
+Dungeon & Dangerous Area Encyclopedia
+</h2>
+
+
+<p>
+Volume I - Chapter VI
+</p>
+
+
+</header>
+
+
+
+
+
+
+
+<section class="intro">
+
+
+<h2>
+DUNGEON CLASSIFICATION
+</h2>
+
+
+<p>
+
+Dungeon adalah wilayah berbahaya yang terbentuk
+karena energi Mana, World Core, Ancient Civilization,
+atau fenomena Realm.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="continent-list">
+
+
+
+<div class="continent-card"
+onclick="openDungeonRegion('abyssal')">
+
+
+<h2>
+🌑 Abyssal Border
+</h2>
+
+
+<p>
+Boundary of The World
+</p>
+
+
+<span>
+4 Dangerous Locations
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="continent-card"
+onclick="openDungeonRegion('centralis')">
+
+
+<h2>
+🏛 Centralis
+</h2>
+
+
+<p>
+Heart of Civilization
+</p>
+
+
+<span>
+Ancient Ruins
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="continent-card"
+onclick="openDungeonRegion('eldoria')">
+
+
+<h2>
+🌳 Eldoria
+</h2>
+
+
+<p>
+Land of Eternal Forest
+</p>
+
+
+<span>
+Nature Dungeon
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="continent-card"
+onclick="openDungeonRegion('ignaris')">
+
+
+<h2>
+🔥 Ignaris
+</h2>
+
+
+<p>
+Land of Fire and Steel
+</p>
+
+
+<span>
+Mining Dungeon
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="continent-card"
+onclick="openDungeonRegion('frostheim')">
+
+
+<h2>
+❄ Frostheim
+</h2>
+
+
+<p>
+Land of Northern Ice
+</p>
+
+
+<span>
+Frozen Dungeon
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="continent-card"
+onclick="openDungeonRegion('sylvara')">
+
+
+<h2>
+🌿 Sylvara
+</h2>
+
+
+<p>
+Land of Life
+</p>
+
+
+<span>
+Ancient Nature Dungeon
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="continent-card forbidden"
+onclick="openDungeonRegion('void')">
+
+
+<h2>
+🌌 Forbidden Land
+</h2>
+
+
+<p>
+The Last Territory
+</p>
+
+
+<span>
+Unknown Rank
+</span>
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<div id="detail">
+
+
+<div id="detail-box">
+
+
+
+<span onclick="closeDungeon()">
+
+✖
+
+</span>
+
+
+
+<div id="dungeon-content">
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<script src="dungeon.js"></script>
+
+
+
+</body>
+
+</html>
