@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+AETHERION CHARACTER CODEX
+</title>
+
+
+<link rel="stylesheet" href="character.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="container">
+
+
+
+<a href="../dasbor.html" class="back-btn">
+⬅ Back
+</a>
+
+
+
+<h1>
+⚔️ AETHERION CHARACTER CODEX
+</h1>
+
+
+<p class="subtitle">
+World Character Encyclopedia
+</p>
+
+
+
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+
+<input 
+type="text"
+id="search"
+placeholder="Search Character..."
+onkeyup="searchCharacter()"
+>
+
+
+</div>
+
+
+
+
+
+<!-- FILTER -->
+
+
+<div class="filter-box">
+
+
+<select id="raceFilter" onchange="filterCharacter()">
+
+<option value="all">
+All Race
+</option>
+
+
+<option>
+Human
+</option>
+
+
+<option>
+Elf
+</option>
+
+
+<option>
+Dwarf
+</option>
+
+
+<option>
+Beastkin
+</option>
+
+
+</select>
+
+
+
+
+
+<select id="roleFilter" onchange="filterCharacter()">
+
+
+<option value="all">
+All Role
+</option>
+
+
+<option>
+Main Character
+</option>
+
+
+<option>
+Academy Student
+</option>
+
+
+<option>
+Noble
+</option>
+
+
+<option>
+Mentor
+</option>
+
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+
+
+<h2 class="category-title">
+Character Archive
+</h2>
+
+
+
+
+
+<div id="character-list" class="character-grid">
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script src="character.js"></script>
+
+
+</body>
+
+</html>
